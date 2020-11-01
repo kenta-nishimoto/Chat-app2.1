@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ /* 下記の記述でpaddingなどの影響を受けずにサイズ調整ができるようになる
+ セレクターに＊を指定すると要素の全てを指定することになる */
+ * {
+   box-sizing: border-box;
+ }
