@@ -1,8 +1,63 @@
+<%# 下記はメインチャットのヘッダー部分 %>
 <div class="chat-header">
+  <div class="left-header">
+    <div class="header-title">
+      hogefuga
+    </div>
+  </div>
+  <div class="right-header">
+    <div class="header-button">
+      <a href="#">チャットを終了する</a>
+    </div>
+  </div>
 </div>
 
+
+<%# 下記はメインチャットのメッセージが表示される部分 %>
 <div class="messages">
+  <div class="message">
+    <div class="upper-message">
+      <div class="message-user">
+        Tom
+      </div>
+      <div class="message-date">
+        2020/3/31(Wed) 12:43:30
+      </div>
+    </div>
+    <div class="lower-message">
+      <div class="message-content">
+        おはよう
+      </div>
+    </div>
+  </div>
+
+  <div class="message">
+    <div class="upper-message">
+      <div class="message-user">
+        Tom
+      </div>
+      <div class="message-date">
+        2020/3/31(Wed) 12:47:30
+      </div>
+    </div>
+    <div class="lower-message">
+      <div class="message-content">
+        こんばんは
+      </div>
+    </div>
+  </div>
 </div>
 
+<%# 下記はチャット画面のフォームの場所 %>
 <div class="form">
+  <div class="form-input">
+    <input class="form-message" placeholder= "type a message">
+    <%# ↪︎「placeholder」は文字をうっすら表示させたい時に利用する %>
+    <label class="form-image">
+     <span class="image-file">画像</span>
+     <input type="file" class="hidden">
+    </label>
+    <%# ↪︎「label」要素のおかげで画像を押しても「ファイルを選択」という不要な文字が出ない %>
+  </div>
+  <input class="form-submit" type="submit" value="送信">
 </div>
