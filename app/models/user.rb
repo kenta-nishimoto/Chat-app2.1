@@ -3,4 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  validatas :name, presence: true
+  # ↪︎nameが空だと保存できないように設定している
 end
