@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validatas :name, presence: true
+  validates :name, presence: true
   # ↪︎nameが空だと保存できないように設定している
 end
