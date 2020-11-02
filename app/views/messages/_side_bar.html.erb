@@ -1,6 +1,9 @@
+<%# ここはチャット画面の左側のビュー %>
+
 <div class="side-bar-header">
   <div class="header-name">
-    <a href="#">Tom</a>
+  <%= link_to current_user.name, edit_user_path(current_user) %>
+  <%# ↪︎この記述のおかげで左上に炉付いんしている人の名前と、そこを押せば編集のビューへ飛ぶ %>
   </div>
   <div class="create-room">
     <a href="#">チャットを作成する</a>
