@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   # ↪︎nameが空だと保存できないように設定している
+
+  has_many :room_users
+  has_many :rooms, through: :room_users
 end
