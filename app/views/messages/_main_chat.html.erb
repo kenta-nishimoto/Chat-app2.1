@@ -8,11 +8,11 @@
   </div>
   <div class="right-header">
     <div class="header-button">
-      <a href="#">チャットを終了する</a>
+      <%= link_to "チャットを終了する", room_path(@room), method: :delete %>
+     <%# ↪︎下記の記述でチャットを終了するとチャットルームが削除される %>
     </div>
   </div>
 </div>
-
 
 <%# 下記はメインチャットのメッセージが表示される部分 %>
 <div class="messages">
