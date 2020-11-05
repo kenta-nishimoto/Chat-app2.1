@@ -49,15 +49,16 @@
 </div>
 
 <%# 下記はチャット画面のフォームの場所 %>
-<div class="form">
+<%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
+<%# 　↪︎この＠roomには「指定したチャットルームの情報」、＠messageには空のインスタンスが入っている %>
   <div class="form-input">
-    <input class="form-message" placeholder= "type a message">
-    <%# ↪︎「placeholder」は文字をうっすら表示させたい時に利用する %>
+    <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
+      <%# ↪︎「placeholder」は文字をうっすら表示させたい時に利用する %>
     <label class="form-image">
-     <span class="image-file">画像</span>
-     <input type="file" class="hidden">
+      <span class="image-file">画像</span>
+      <%= f.file_field :image, class: 'hidden' %>
     </label>
-    <%# ↪︎「label」要素のおかげで画像を押しても「ファイルを選択」という不要な文字が出ない %>
+      <%# ↪︎「label」要素のおかげで画像を押しても「ファイルを選択」という不要な文字が出ない %>
   </div>
-  <input class="form-submit" type="submit" value="送信">
-</div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
