@@ -17,7 +17,7 @@
       <!-- 投稿したメッセージ内容を記述する -->
       <%= message.content%>
     </div>
-     <%= image_tag message.image.variant(resize: '500x500'), class: 'message-image' if message.image.attached?%>
+    <%= image_tag message.image, class: 'message-image' if message.image.attached? %>
      <%# ↪︎ヘルパーメソッドを用いて簡単に画像を呼び出している %>
      <%# attached?メソッド：画像がある場合のみ表示させる
      ↪︎記述方法は「モデル.ファイル名.attached?」 %>

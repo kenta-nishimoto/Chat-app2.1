@@ -5,5 +5,9 @@ class Message < ApplicationRecord
   # ↪︎メッセージテーブルと画像を紐づけるための記述
   # has_one_attachedメソッド：各レコードとファイルを１対１の関係で結ぶ
 
-  validates :content, presence: true
+  validates :content, presence: true, unless: :was_attached?
+
+  def was_attached?
+    self.image.attached?
+  end
 end
